@@ -40,7 +40,7 @@ fn main() {
 
 ## Data types
 
-### Number
+### Number [Data types]
 
 ```rust
 fn main() {
@@ -52,7 +52,7 @@ fn main() {
 }
 ```
 
-### Boolean
+### Boolean [Data types]
 
 ```rust
 fn main() {
@@ -62,7 +62,7 @@ fn main() {
 }
 ```
 
-### Symbol char
+### Symbol char [Data types]
 
 ```rust
 fn main() {
@@ -72,7 +72,7 @@ fn main() {
 }
 ```
 
-### Composite type
+### Composite type [Data types]
 
 ```rust
 fn main() {
@@ -90,7 +90,7 @@ fn main() {
 }
 ```
 
-### Array
+### Array [Data types]
 
 ```rust
 fn main() {
@@ -100,7 +100,7 @@ fn main() {
 }
 ```
 
-### String
+### String [Data types]
 
 ```rust
 fn main() {
