@@ -37,3 +37,75 @@ fn main() {
 }
 
 ```
+
+## Data types
+
+### Number
+
+```rust
+fn main() {
+    let x: i64 = 5;
+    let y: f64 = 3.05;
+
+    println!("X: {}", x);
+    println!("Y: {}", y);
+}
+```
+
+### Boolean
+
+```rust
+fn main() {
+    let t: bool = true;
+
+    println!("T: {}", t);
+}
+```
+
+### Symbol char
+
+```rust
+fn main() {
+    let t: char = 'I';
+
+    println!("T: {}", t);
+}
+```
+
+### Composite type
+
+```rust
+fn main() {
+    let tup: (i64, f64, u8) = (32, 3.05, 1);
+
+    let (x, y, z) = tup;
+
+    println!("X: {}", x);
+    println!("Y: {}", y);
+    println!("Z: {}", z);
+
+    println!("X: {}", tup.0);
+    println!("Y: {}", tup.1);
+    println!("Z: {}", tup.2);
+}
+```
+
+### Array
+
+```rust
+fn main() {
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    println!("Item {}", a[1]);
+}
+```
+
+### String
+
+```rust
+fn main() {
+    let a: &'static str = "Test row";
+
+    println!("Item {}", a);
+}
+```
