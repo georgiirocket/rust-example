@@ -1,4 +1,6 @@
-## Variables, constants
+## Variables
+
+### let, const [variables]
 
 ```rust
 fn main() {
@@ -12,4 +14,22 @@ fn main() {
     x = 6;
     println!("This value is {}", x);
 }
+```
+
+### Shading [variables]
+
+```rust
+fn main() {
+    let x = 5;
+
+    let x = x + 1;
+
+    {
+        let x = 3;
+        println!("The value of x in the inner scope is: {x}"); // 3
+    }
+
+    println!("The value of x is: {x}"); // 6
+}
+
 ```
