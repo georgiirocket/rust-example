@@ -30,6 +30,10 @@ fn main() {
     }
 
     println!("The value of x is: {x}"); // 6
+
+    // Error
+    // let mut spaces = "   ";
+    // spaces = spaces.len();
 }
 
 ```
