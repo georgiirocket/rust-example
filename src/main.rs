@@ -1,5 +1,15 @@
 fn main() {
-    let a: &'static str = "Test row";
+    let five: i64 = get_five();
+    let six: i64 = get_six();
 
-    println!("Item {}", a);
+    println!("Number = {}", five);
+    println!("Number = {}", six);
+}
+
+fn get_five() -> i64 {
+    5 // Not use ;
+}
+
+fn get_six() -> i64 {
+    return 6;
 }

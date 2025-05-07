@@ -109,3 +109,75 @@ fn main() {
     println!("Item {}", a);
 }
 ```
+
+## Fuctions
+
+### Simple [Fuctions]
+
+```rust
+fn main() {
+    print_fn();
+}
+
+//Snake case
+fn print_fn() {
+    println!("Hello!!!");
+}
+```
+
+### Fn with params [Fuctions]
+
+```rust
+fn main() {
+    print_number(10);
+}
+
+fn print_number(x: i32) {
+    println!("Number: {}", x);
+}
+```
+
+### Fn with some params [Fuctions]
+
+```rust
+fn main() {
+    print_labeled_measurement(10, 'h');
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}");
+}
+```
+
+### Expressions [Fuctions]
+
+```rust
+fn main() {
+    let a: i64 = {
+        let x: i64 = 20;
+        x + 1 //Not use ; return value
+    };
+
+    println!("A = {}", a);
+}
+```
+
+### Return value [Fuctions]
+
+```rust
+fn main() {
+    let five: i64 = get_five();
+    let six: i64 = get_six();
+
+    println!("Number = {}", five);
+    println!("Number = {}", six);
+}
+
+fn get_five() -> i64 {
+    5 // Not use ;
+}
+
+fn get_six() -> i64 {
+    return 6;
+}
+```
