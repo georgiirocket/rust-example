@@ -110,9 +110,9 @@ fn main() {
 }
 ```
 
-## Fuctions
+## Functions
 
-### Simple [Fuctions]
+### Simple [Functions]
 
 ```rust
 fn main() {
@@ -125,7 +125,7 @@ fn print_fn() {
 }
 ```
 
-### Fn with params [Fuctions]
+### Fn with params [Functions]
 
 ```rust
 fn main() {
@@ -137,7 +137,7 @@ fn print_number(x: i32) {
 }
 ```
 
-### Fn with some params [Fuctions]
+### Fn with some params [Functions]
 
 ```rust
 fn main() {
@@ -149,7 +149,7 @@ fn print_labeled_measurement(value: i32, unit_label: char) {
 }
 ```
 
-### Expressions [Fuctions]
+### Expressions [Functions]
 
 ```rust
 fn main() {
@@ -162,7 +162,7 @@ fn main() {
 }
 ```
 
-### Return value [Fuctions]
+### Return value [Functions]
 
 ```rust
 fn main() {
@@ -182,7 +182,7 @@ fn get_six() -> i64 {
 }
 ```
 
-## Сonditional expressions
+## Conditional expressions
 
 ```rust
 fn main() {
@@ -210,7 +210,7 @@ fn main() {
 }
 ```
 
-### With expression [Сonditional expressions]
+### With expression [Conditional expressions]
 ```rust
 fn main() {
     let condition = true;
@@ -218,5 +218,106 @@ fn main() {
 
     println!("The value of number is: {number}");
 }
+```
 
+## Loop
+
+### Infinity loop [Loop]
+```rust
+fn main() {
+    loop {
+        println!("again!");
+    }
+}
+```
+
+### Return value from loop [Loop]
+```rust
+fn main() {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {}", result);
+}
+```
+
+### Cycle labels [Loop]
+```rust
+fn main() {
+    let mut count = 0;
+
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+
+        count += 1;
+    }
+    println!("End count = {count}");
+}
+```
+
+### While [Loop]
+```rust
+fn main() {
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!");
+}
+```
+
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("the value is: {}", a[index]);
+
+        index += 1;
+    }
+}
+```
+
+### For [Loop]
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {element}");
+    }
+}
+```
+
+```rust
+fn main() {
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
+}
 ```
