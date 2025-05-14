@@ -1,6 +1,6 @@
 ## Variables
 
-### let, const [variables]
+### let, const
 
 ```rust
 fn main() {
@@ -16,7 +16,7 @@ fn main() {
 }
 ```
 
-### Shading [variables]
+### Shading
 
 ```rust
 fn main() {
@@ -40,7 +40,7 @@ fn main() {
 
 ## Data types
 
-### Number [Data types]
+### Number
 
 ```rust
 fn main() {
@@ -52,7 +52,7 @@ fn main() {
 }
 ```
 
-### Boolean [Data types]
+### Boolean
 
 ```rust
 fn main() {
@@ -62,7 +62,7 @@ fn main() {
 }
 ```
 
-### Symbol char [Data types]
+### Symbol char
 
 ```rust
 fn main() {
@@ -72,7 +72,7 @@ fn main() {
 }
 ```
 
-### Composite type [Data types]
+### Composite type
 
 ```rust
 fn main() {
@@ -90,7 +90,7 @@ fn main() {
 }
 ```
 
-### Array [Data types]
+### Array
 
 ```rust
 fn main() {
@@ -100,7 +100,7 @@ fn main() {
 }
 ```
 
-### String [Data types]
+### String
 
 ```rust
 fn main() {
@@ -112,7 +112,7 @@ fn main() {
 
 ## Functions
 
-### Simple [Functions]
+### Simple
 
 ```rust
 fn main() {
@@ -125,7 +125,7 @@ fn print_fn() {
 }
 ```
 
-### Fn with params [Functions]
+### Fn with params
 
 ```rust
 fn main() {
@@ -137,7 +137,7 @@ fn print_number(x: i32) {
 }
 ```
 
-### Fn with some params [Functions]
+### Fn with some params
 
 ```rust
 fn main() {
@@ -149,7 +149,7 @@ fn print_labeled_measurement(value: i32, unit_label: char) {
 }
 ```
 
-### Expressions [Functions]
+### Expressions
 
 ```rust
 fn main() {
@@ -162,7 +162,7 @@ fn main() {
 }
 ```
 
-### Return value [Functions]
+### Return value
 
 ```rust
 fn main() {
@@ -210,7 +210,7 @@ fn main() {
 }
 ```
 
-### With expression [Conditional expressions]
+### With expression
 ```rust
 fn main() {
     let condition = true;
@@ -222,7 +222,7 @@ fn main() {
 
 ## Loop
 
-### Infinity loop [Loop]
+### Infinity loop
 ```rust
 fn main() {
     loop {
@@ -231,7 +231,7 @@ fn main() {
 }
 ```
 
-### Return value from loop [Loop]
+### Return value from loop
 ```rust
 fn main() {
     let mut counter = 0;
@@ -248,7 +248,7 @@ fn main() {
 }
 ```
 
-### Cycle labels [Loop]
+### Cycle labels
 ```rust
 fn main() {
     let mut count = 0;
@@ -274,7 +274,7 @@ fn main() {
 }
 ```
 
-### While [Loop]
+### While
 ```rust
 fn main() {
     let mut number = 3;
@@ -302,7 +302,7 @@ fn main() {
 }
 ```
 
-### For [Loop]
+### For
 ```rust
 fn main() {
     let a = [10, 20, 30, 40, 50];
@@ -324,7 +324,7 @@ fn main() {
 
 ## Links
 
-### Unchangeable [Links]
+### Unchangeable
 ```rust
 fn main() {
     let s = String::from("hello");  // s comes into scope
@@ -338,7 +338,7 @@ fn change(s: &String) {
 }
 ```
 
-### Changeable [Links]
+### Changeable
 ```rust
 fn main() {
     let mut s = String::from("hello");  // s comes into scope
@@ -384,5 +384,73 @@ fn first_word(s: &String) -> &str {
     }
 
     &s[..]
+}
+```
+
+## Structs
+
+```rust
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+
+
+fn main() {
+    let user = User {
+        active: true,
+        username: String::from("someusername123"),
+        email: String::from("<EMAIL>"),
+        sign_in_count: 1,
+    };
+
+    println!("Username: {}", user.username)
+}
+```
+
+### Copy struct
+
+```rust
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+
+
+fn main() {
+    let user = User {
+        active: true,
+        username: String::from("someusername123"),
+        email: String::from("<EMAIL>"),
+        sign_in_count: 1,
+    };
+
+    println!("Username: {}", user.username)
+}
+```
+
+### Tuple structures
+
+```rust
+struct Color(i32, i32, i32);
+
+
+fn main() {
+    let user = Color(1, 2, 3);
+
+    println!("Username: {}", user.1)
+}
+```
+
+### Unit-like structures: structures without fields
+```rust
+struct AlwaysEqual;
+
+fn main() {
+    let subject = AlwaysEqual;
 }
 ```

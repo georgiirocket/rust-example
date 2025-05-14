@@ -1,19 +1,8 @@
+struct Color(i32, i32, i32);
+
+
 fn main() {
-    let s = String::from("hello world");
+    let user = Color(1, 2, 3);
 
-    let first_w = first_word(&s);
-
-    println!("{}", first_w); //hello
-}
-
-fn first_word(s: &String) -> &str {
-    let bytes = s.as_bytes();
-
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return &s[0..i];
-        }
-    }
-
-    &s[..]
+    println!("Username: {}", user.1)
 }
